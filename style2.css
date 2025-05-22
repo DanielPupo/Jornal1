@@ -5,12 +5,15 @@ box-sizing: border-box;
 }
 
 body {
+  width: 100%;
+  height: 100%;
 font-family: Arial, sans-serif;
 display: flex;
 flex-direction: column;
 }
 
 .topo {
+  width: 100%;
 background: #ccc;
 display: flex;
 height: 100px;
@@ -21,6 +24,7 @@ font-size: 40px;
 }
 
 .logo {
+  font-size: 45px;
 font-weight: bold;
 }
 
@@ -81,7 +85,9 @@ width: 50%;
 height: 100%;
 }
 .secundaria .imagem img {
-width: 100%;
+width: 100%; /* A imagem preenche a largura do contêiner */
+  height: 100%; /* A imagem preenche a altura do contêiner */
+  object-fit: cover; /* A propriedade mágica! */
 }
 
 .secundaria .texto {
@@ -131,10 +137,15 @@ margin-bottom: 15px;
 }
 
 .nivel3 .imagem {
-overflow: hidden;
 width: 25%;
 background: #ccc;
 height: 100%;
+}
+
+.nivel3 .imagem img {
+  width: 100%; /* A imagem preenche a largura do contêiner */
+  height: 100%; /* A imagem preenche a altura do contêiner */
+  object-fit: cover; /* A propriedade mágica! */
 }
 
 .rodape {
